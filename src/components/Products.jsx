@@ -35,6 +35,7 @@ export const productsData = [
     id: 'scrap-grinder',
     name: 'Plastic Scrap Grinding Machine',
     tagline: 'Heavy-Duty 24" Recycling Grinder',
+    image: '/images/scrap_grinder.png',
     shortDesc: 'Engineered for high-efficiency grinding of rigid plastic scrap, bottles, and polymers.',
     specifications: {
       'Model': 'SEW-PG300',
@@ -56,6 +57,7 @@ export const productsData = [
     id: 'ink-mixer',
     name: 'Industrial Ink Mixing Machine',
     tagline: 'High-Viscosity Planetary Mixer',
+    image: '/images/ink_mixer.png',
     shortDesc: 'Double shaft planetary mixer for uniform blending of inks, paints, and pigments.',
     specifications: {
       'Model': 'SEW-IM1000',
@@ -77,6 +79,7 @@ export const productsData = [
     id: 'recoiler',
     name: 'Semi-Automatic Recoiler Machine',
     tagline: 'High-Tension Sheet Metal Winder',
+    image: '/images/recoiler_machine.png',
     shortDesc: '415V loop-synchronized tension recoiler for metal coils and strips.',
     specifications: {
       'Model': 'SEW-RC415',
@@ -98,6 +101,7 @@ export const productsData = [
     id: 'hydraulic-uncoiler',
     name: 'Hydraulic Uncoiler Machine',
     tagline: 'Heavy-Duty Coil Decoiling System',
+    image: '/images/hydraulic_uncoiler.png',
     shortDesc: 'Automated hydraulic expansion decoiler for coil feeding lines.',
     specifications: {
       'Model': 'SEW-HU600',
@@ -119,6 +123,7 @@ export const productsData = [
     id: 'storage-tank',
     name: 'Stainless Steel Storage Tank',
     tagline: 'Custom Sanitary Storage Vessel',
+    image: '/images/storage_tank.png',
     shortDesc: 'Custom fabricated stainless steel tanks for chemical and oil storage.',
     specifications: {
       'Model': 'SEW-SST5000',
@@ -140,6 +145,7 @@ export const productsData = [
     id: 'carton-machine',
     name: 'Carton Box Making Machine',
     tagline: 'High-Speed Slotter & Scoring Machine',
+    image: '/images/carton_machine.png',
     shortDesc: 'Semi-automatic scoring and cutting machine for corrugated cardboard box production.',
     specifications: {
       'Model': 'SEW-CB900',
@@ -183,11 +189,15 @@ const Products = ({ onSelectProduct }) => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => onSelectProduct(product)}
             >
-              <div className="product-image-container blueprint-container">
-                {renderBlueprint(product.id)}
+              <div className="product-image-container">
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="product-grid-image"
+                />
                 <div className="product-image-overlay">
                   <span className="btn-primary detail-btn">
-                    View Blueprint Specs <ArrowRight size={16} />
+                    View Specifications <ArrowRight size={16} />
                   </span>
                 </div>
               </div>

@@ -217,3 +217,10 @@
     gap: 40px;
   }
 }
+
+@media (max-width: 576px) {
+  .cert-strip-wrap {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

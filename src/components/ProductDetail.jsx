@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import './ProductDetail.css'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Check, MessageSquareCode, Truck, ShieldCheck, Settings2, Calculator, ArrowRight } from 'lucide-react'
+import { X, Check, MessageSquareCode, Truck, ShieldCheck, Settings2, Calculator, Eye, LayoutGrid } from 'lucide-react'
 import { renderBlueprint } from './Products'
 
 const ProductDetail = ({ product, onClose }) => {
+  const [viewMode, setViewMode] = useState('photo') // 'photo' | 'blueprint'
   const [calcInput, setCalcInput] = useState('')
   const [calcResults, setCalcResults] = useState(null)
 
@@ -15,6 +16,13 @@ const ProductDetail = ({ product, onClose }) => {
       document.body.style.overflow = 'unset'
     }
   }, [])
+
+  // Reset view mode to photo when product changes
+  useEffect(() => {
+    setViewMode('photo')
+    setCalcInput('')
+    setCalcResults(null)
+  }, [product])
 
   // Dynamic calculations when calcInput changes
   useEffect(() => {
@@ -127,8 +135,33 @@ const ProductDetail = ({ product, onClose }) => {
           <div className="modal-grid">
             {/* Image/Blueprint Column */}
             <div className="modal-image-column">
-              <div className="modal-image-wrap blueprint-detail-container">
-                {renderBlueprint(product.id)}
+              {/* Tab Selector */}
+              <div className="detail-view-tabs">
+                <button 
+                  className={`view-tab-btn ${viewMode === 'photo' ? 'active' : ''}`}
+                  onClick={() => setViewMode('photo')}
+                >
+                  <Eye size={15} /> Catalog Photo
+                </button>
+                <button 
+                  className={`view-tab-btn ${viewMode === 'blueprint' ? 'active' : ''}`}
+                  onClick={() => setViewMode('blueprint')}
+                >
+                  <LayoutGrid size={15} /> CAD Blueprint
+                </button>
+              </div>
+
+              {/* View Wrapper */}
+              <div className={`modal-image-wrap ${viewMode === 'blueprint' ? 'blueprint-detail-container' : 'photo-detail-container'}`}>
+                {viewMode === 'photo' ? (
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="product-detail-img-element"
+                  />
+                ) : (
+                  renderBlueprint(product.id)
+                )}
               </div>
               
               {/* Trust Badges */}
