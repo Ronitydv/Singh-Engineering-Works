@@ -41,6 +41,25 @@ main {
   font-weight: 600;
 }
 
+.footer-credit {
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
+  margin-top: 5px;
+}
+
+.credit-link {
+  color: var(--primary-gold);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--primary-gold);
+  transition: var(--transition-smooth);
+}
+
+.credit-link:hover {
+  color: var(--primary-amber);
+  border-bottom-color: var(--primary-amber);
+}
+
 @media (max-width: 768px) {
   .footer-panel {
     padding: 30px 15px;

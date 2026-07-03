@@ -63,6 +63,17 @@ function App() {
         <div className="container footer-content">
           <p>© 2026 Singh Engineering Works. All Rights Reserved.</p>
           <p className="footer-sub">Designed & engineered for extreme durability and precision.</p>
+          <p className="footer-credit">
+            Made with ❤️ by{' '}
+            <a 
+              href="https://github.com/Ronitydv" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="credit-link"
+            >
+              Ronit Yadav
+            </a>
+          </p>
         </div>
       </footer>
 
