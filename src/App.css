@@ -1,0 +1,48 @@
+/* App Level Layout Styles */
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* Footer Section */
+.footer-panel {
+  background: var(--bg-darker);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px 20px;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-panel p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.footer-sub {
+  font-size: 0.8rem !important;
+  color: var(--primary-gold) !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .footer-panel {
+    padding: 30px 15px;
+  }
+}

@@ -1,0 +1,146 @@
+.reviews {
+  background-color: var(--bg-darker);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.reviews-header {
+  margin-bottom: 50px;
+}
+
+/* Full-width Marquee Wrapper */
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  /* Centers and stretches to match viewport edges */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 10px 0;
+}
+
+/* Add gradient fading mask on left and right edges for premium blend look */
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-darker) 15%, transparent 100%);
+}
+
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-darker) 15%, transparent 100%);
+}
+
+/* Continuous Sliding Track */
+.marquee-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+}
+
+/* Pause scroll when cursor hovers */
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Review Card styling inside marquee */
+.review-card {
+  width: 400px;
+  flex-shrink: 0;
+  padding: 35px 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 230px;
+}
+
+.quote-icon-wrap {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.12;
+  color: var(--primary-gold);
+}
+
+.review-stars-box {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.review-text-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.review-footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 15px;
+}
+
+.review-footer-main h4 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+.review-role-text {
+  font-size: 0.8rem;
+  color: var(--primary-gold);
+  font-weight: 500;
+  display: block;
+  margin-top: 2px;
+}
+
+.review-time-ago {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Infinite Scroll Keyframes */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Since we duplicated the list once, translate exactly half width */
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    width: 320px;
+    padding: 25px 20px;
+  }
+  .marquee-wrapper::before,
+  .marquee-wrapper::after {
+    width: 50px;
+  }
+  .marquee-track {
+    animation-duration: 30s; /* Scroll slightly faster on mobile */
+  }
+}

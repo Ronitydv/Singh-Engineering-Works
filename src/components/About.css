@@ -1,0 +1,134 @@
+.about-section {
+  background-color: var(--bg-dark);
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  aspect-ratio: 4 / 3;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(11, 12, 16, 0.6) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.about-image-overlay-card {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(11, 12, 16, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.about-overlay-icon {
+  font-size: 24px;
+  color: var(--primary-gold);
+}
+
+.about-overlay-text h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.about-overlay-text p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.about-para.lead {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.about-para {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.about-content {
+  text-align: left;
+}
+
+.about-highlights-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.about-highlights-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.about-check-icon {
+  color: var(--primary-amber);
+  flex-shrink: 0;
+}
+
+.about-action-row {
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-highlights-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
