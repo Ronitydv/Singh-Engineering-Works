@@ -10,13 +10,25 @@
   
   <!-- Products Parametric URLs -->
   <url>
-    <loc>https://singhengineering.in/?product=scrap-grinder</loc>
+    <loc>https://singhengineering.in/?product=paint-filter</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://singhengineering.in/?product=ink-mixer</loc>
+    <loc>https://singhengineering.in/?product=gear-assembly</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://singhengineering.in/?product=screw-conveyor</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://singhengineering.in/?product=ss-tank</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -28,19 +40,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://singhengineering.in/?product=hydraulic-uncoiler</loc>
+    <loc>https://singhengineering.in/?product=cutting-machine</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://singhengineering.in/?product=storage-tank</loc>
+    <loc>https://singhengineering.in/?product=forged-hammers</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://singhengineering.in/?product=carton-machine</loc>
+    <loc>https://singhengineering.in/?product=laser-printing</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
