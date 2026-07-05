@@ -124,7 +124,7 @@
 .mobile-drawer-nav {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -320px; /* Fully off-screen relative to its 300px width */
   width: 300px;
   height: 100vh;
   background: var(--bg-darker);
@@ -136,11 +136,14 @@
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.6);
   border-left: 1px solid rgba(255, 255, 255, 0.05);
   transition: var(--transition-smooth);
+  visibility: hidden; /* Prevent rendering scroll bounds when closed */
 }
 
 .mobile-drawer-nav.active {
   right: 0;
+  visibility: visible;
 }
+
 
 .mobile-nav-link {
   background: none;

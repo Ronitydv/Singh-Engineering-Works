@@ -128,7 +128,7 @@
 
 @media (max-width: 768px) {
   .review-card {
-    width: 320px;
+    width: clamp(270px, 85vw, 320px); /* Fluidly shrink to fit narrow screens */
     padding: 25px 20px;
   }
   .marquee-wrapper::before,

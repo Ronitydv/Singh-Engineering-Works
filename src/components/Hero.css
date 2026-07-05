@@ -247,6 +247,21 @@
   }
 }
 
+@media (max-width: 576px) {
+  .hero-stats {
+    gap: 15px; /* Narrower gap for small screens to prevent clipping */
+    padding-top: 20px;
+  }
+  .stat-num {
+    font-size: 1.65rem; /* Resized downward for mobile fit */
+  }
+  .stat-label {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+}
+
+
 /* Background Drawing SVG Path for Hero Section */
 .hero-scroll-svg {
   position: absolute;
