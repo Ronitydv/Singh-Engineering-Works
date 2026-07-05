@@ -4,11 +4,13 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Capabilities from './components/Capabilities'
-import Products, { productsData } from './components/Products'
+import Products from './components/Products'
+import Machinery from './components/Machinery'
+import { productsData } from './data/productsData'
 import ProductDetail from './components/ProductDetail'
 import Customizer from './components/Customizer'
 import Reviews from './components/Reviews'
-import ScrollStroke from './components/ScrollStroke'
+import ShowcaseSlider from './components/ShowcaseSlider'
 import ContactForm from './components/ContactForm'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 
@@ -54,9 +56,10 @@ function App() {
         <Hero onOpenCustomizer={() => setIsCustomizerOpen(true)} />
         <About />
         <Capabilities />
+        <ShowcaseSlider />
+        <Machinery onSelectProduct={handleSelectProduct} />
         <Products onSelectProduct={handleSelectProduct} />
         <Reviews />
-        <ScrollStroke />
         <ContactForm />
       </main>
 

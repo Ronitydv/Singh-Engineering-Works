@@ -1,0 +1,123 @@
+.showcase-slider-section {
+  padding: 80px 0;
+  background-color: var(--bg-dark);
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.showcase-header {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.showcase-header .section-tag {
+  color: var(--primary-gold);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.showcase-header .section-title {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.showcase-header .section-desc {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 12px auto 0 auto;
+  line-height: 1.5;
+}
+
+/* Infinite Scroll Marquee */
+.showcase-marquee-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Linear scrolling track */
+.showcase-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-showcase 35s linear infinite;
+}
+
+/* Hovering pause for high user interaction */
+.showcase-marquee-container:hover .showcase-marquee-track {
+  animation-play-state: paused;
+}
+
+.showcase-card {
+  flex-shrink: 0;
+  width: 340px;
+  height: 250px;
+  margin: 0 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow-premium);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.showcase-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: var(--primary-gold);
+}
+
+.showcase-img-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #0b0c10;
+}
+
+.showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.showcase-card:hover .showcase-img {
+  transform: scale(1.05);
+}
+
+/* Seamless infinite scroll translate keyframes */
+@keyframes scroll-showcase {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll exactly half of the double width track */
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .showcase-slider-section {
+    padding: 60px 0;
+  }
+  
+  .showcase-card {
+    width: 260px;
+    height: 190px;
+    margin: 0 8px;
+  }
+
+  .showcase-marquee-track {
+    animation-duration: 25s; /* Slightly faster scroll speed for smaller screen widths */
+  }
+}

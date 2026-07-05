@@ -11,55 +11,9 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 import { productsData } from '../data/productsData'
-import { 
-  GrinderBlueprint, 
-  MixerBlueprint, 
-  RecoilerBlueprint, 
-  UncoilerBlueprint, 
-  TankBlueprint, 
-  CartonBlueprint 
-} from './BlueprintDrawings'
 
-export const renderBlueprint = (id) => {
-  switch (id) {
-    case 'paint-filter':
-      return <MixerBlueprint />
-    case 'recoiler':
-      return <RecoilerBlueprint />
-    case 'cutting-machine':
-      return <CartonBlueprint />
-    case 'tube-rolling-mill':
-      return <RecoilerBlueprint />
-    case 'scrap-grinder':
-      return <GrinderBlueprint />
-    case 'ink-mixer':
-      return <MixerBlueprint />
-    case 'hydraulic-uncoiler':
-      return <UncoilerBlueprint />
-    case 'carton-machine':
-      return <CartonBlueprint />
-    case 'ss-tank':
-      return <TankBlueprint />
-    case 'gear-assembly':
-      return <GrinderBlueprint />
-    case 'screw-conveyor':
-      return <CartonBlueprint />
-    case 'forged-hammers':
-      return <GrinderBlueprint />
-    case 'laser-printing':
-      return <UncoilerBlueprint />
-    case 'custom-fabrication':
-      return <MixerBlueprint />
-    case 'pneumatic-brake':
-      return <GrinderBlueprint />
-    default:
-      return null
-  }
-}
-
-
-const Products = ({ onSelectProduct }) => {
-  const componentsProducts = productsData.filter(p => p.category === 'components')
+const Machinery = ({ onSelectProduct }) => {
+  const machineryProducts = productsData.filter(p => p.category === 'machinery')
 
   const swiperOptions = {
     effect: 'coverflow',
@@ -84,27 +38,27 @@ const Products = ({ onSelectProduct }) => {
   }
 
   return (
-    <section id="products" className="products section-padding" style={{ paddingTop: '0px' }}>
+    <section id="machinery" className="products section-padding">
       <div className="container">
         
         <div className="products-header text-center">
-          <div className="section-tag">Spares & Fabrication</div>
-          <h2 className="section-title">Precision Components & Spares</h2>
+          <div className="section-tag">Engineering Units</div>
+          <h2 className="section-title">Our Industrial Machinery</h2>
           <p className="section-desc">
-            Explore our custom fabricated jobworks and spares manufactured to close tolerances. Swipe and click on any component card to view blueprints, estimator calculations, and WhatsApp CTAs.
+            Explore our line of heavy machinery built at our Dharuhera tool room. Swipe and click on any machine card to view detailed specifications, technical parameters, and ordering details.
           </p>
         </div>
 
         <div className="category-block">
           <div className="category-title-wrap">
-            <span className="cat-icon"><i className="fa-solid fa-screwdriver-wrench"></i></span>
-            <h3>Precision Machined Spares</h3>
+            <span className="cat-icon"><i className="fa-solid fa-gears"></i></span>
+            <h3>Heavy Machinery Production</h3>
             <span className="cat-line"></span>
           </div>
 
           <div className="swiper-outer-container">
             <Swiper {...swiperOptions}>
-              {componentsProducts.map((product) => (
+              {machineryProducts.map((product) => (
                 <SwiperSlide key={product.id}>
                   <div className="swiper-product-card glass-card" onClick={() => onSelectProduct(product)}>
                     <div className="swiper-card-img-wrap">
@@ -136,4 +90,4 @@ const Products = ({ onSelectProduct }) => {
   )
 }
 
-export default Products
+export default Machinery

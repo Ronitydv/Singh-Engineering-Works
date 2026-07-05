@@ -49,7 +49,8 @@ const Navbar = ({ onOpenCustomizer }) => {
           <button className="nav-btn-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</button>
           <button className="nav-btn-link" onClick={() => handleScrollTo('about')}>About</button>
           <button className="nav-btn-link" onClick={() => handleScrollTo('features')}>Features</button>
-          <button className="nav-btn-link" onClick={() => handleScrollTo('products')}>Machinery</button>
+          <button className="nav-btn-link" onClick={() => handleScrollTo('machinery')}>Machinery</button>
+          <button className="nav-btn-link" onClick={() => handleScrollTo('products')}>Components</button>
           <button className="nav-btn-link" onClick={() => handleScrollTo('reviews')}>Reviews</button>
           <button className="nav-btn-link" onClick={() => handleScrollTo('location')}>Contact</button>
         </nav>
@@ -80,7 +81,8 @@ const Navbar = ({ onOpenCustomizer }) => {
         <button className="mobile-nav-link" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</button>
         <button className="mobile-nav-link" onClick={() => handleScrollTo('about')}>About</button>
         <button className="mobile-nav-link" onClick={() => handleScrollTo('features')}>Features</button>
-        <button className="mobile-nav-link" onClick={() => handleScrollTo('products')}>Machinery</button>
+        <button className="mobile-nav-link" onClick={() => handleScrollTo('machinery')}>Machinery</button>
+        <button className="mobile-nav-link" onClick={() => handleScrollTo('products')}>Components</button>
         <button className="mobile-nav-link" onClick={() => handleScrollTo('reviews')}>Reviews</button>
         <button className="mobile-nav-link" onClick={() => handleScrollTo('location')}>Contact</button>
         
