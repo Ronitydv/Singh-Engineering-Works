@@ -280,3 +280,19 @@
     display: none !important; /* Hide arrows on small mobile devices to save space */
   }
 }
+
+/* Widescreen Desktop Adjustments: Cards Expand & Scale Up */
+@media (min-width: 1400px) {
+  .products-swiper .swiper-slide {
+    width: 370px;
+  }
+  
+  .swiper-product-card {
+    height: 480px;
+  }
+
+  .swiper-card-img-wrap {
+    height: 240px;
+  }
+}
+

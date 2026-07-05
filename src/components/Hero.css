@@ -63,12 +63,13 @@
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-size: clamp(2.2rem, 5.5vw, 4.5rem);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -1px;
   margin-bottom: 24px;
 }
+
 
 .hero-hindi-slogan {
   font-size: clamp(1.1rem, 2vw, 1.4rem);
@@ -151,7 +152,7 @@
 
 .hero-shop-image-container {
   width: 100%;
-  max-width: 500px;
+  max-width: 580px; /* Expanded for better proportion on larger screens */
   aspect-ratio: 1 / 1;
   border-radius: 24px;
   overflow: hidden;

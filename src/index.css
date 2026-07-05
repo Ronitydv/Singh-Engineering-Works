@@ -105,11 +105,12 @@ a {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 20px;
 }
+
 
 .section-desc {
   font-size: 1.1rem;
@@ -125,10 +126,11 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1440px; /* Expanded spacious layout for large desktop screens */
   margin: 0 auto;
   padding: 0 24px;
 }
+
 
 /* Buttons */
 .btn-primary {
