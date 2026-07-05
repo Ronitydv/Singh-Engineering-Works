@@ -8,6 +8,7 @@ import Products, { productsData } from './components/Products'
 import ProductDetail from './components/ProductDetail'
 import Customizer from './components/Customizer'
 import Reviews from './components/Reviews'
+import ScrollStroke from './components/ScrollStroke'
 import ContactForm from './components/ContactForm'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 
@@ -55,6 +56,7 @@ function App() {
         <Capabilities />
         <Products onSelectProduct={handleSelectProduct} />
         <Reviews />
+        <ScrollStroke />
         <ContactForm />
       </main>
 
