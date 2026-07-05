@@ -194,26 +194,89 @@ a {
   padding: 12px 0;
 }
 
-/* Glassmorphism generic classes */
+/* Glassmorphism generic classes with Frosted Liquid Glass */
 .glass-panel {
-  background: rgba(31, 40, 51, 0.45);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(15, 17, 23, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
   border-radius: 20px;
 }
 
 .glass-card {
-  background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
+  background: rgba(15, 17, 23, 0.55);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
   transition: var(--transition-smooth);
 }
 
 .glass-card:hover {
-  border-color: var(--card-border-glow);
-  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-premium), var(--glow-gold);
 }
+
+/* Floating Radial Gradient Blobs for Liquid Glass Refraction */
+.liquid-blob-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.liquid-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: 0.07; /* Kept very subtle to prevent visual noise or contrast issues */
+  pointer-events: none;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--primary-gold) 0%, rgba(0, 0, 0, 0) 70%);
+  top: -10%;
+  left: -10%;
+  animation: float-blob-1 25s infinite alternate ease-in-out;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--primary-amber) 0%, rgba(0, 0, 0, 0) 70%);
+  top: 35%;
+  right: -5%;
+  animation: float-blob-2 30s infinite alternate ease-in-out;
+}
+
+.blob-3 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, var(--primary-gold) 0%, rgba(0, 0, 0, 0) 70%);
+  bottom: -15%;
+  left: 20%;
+  animation: float-blob-3 35s infinite alternate ease-in-out;
+}
+
+@keyframes float-blob-1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(120px, 80px) scale(1.15); }
+}
+
+@keyframes float-blob-2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-140px, 120px) scale(0.9); }
+}
+
+@keyframes float-blob-3 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(100px, -150px) scale(1.2); }
+}
+

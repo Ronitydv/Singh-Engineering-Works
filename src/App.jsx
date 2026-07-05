@@ -48,6 +48,13 @@ function App() {
 
   return (
     <div className="app-layout">
+      {/* Liquid Glass Background Blobs */}
+      <div className="liquid-blob-container">
+        <div className="liquid-blob blob-1"></div>
+        <div className="liquid-blob blob-2"></div>
+        <div className="liquid-blob blob-3"></div>
+      </div>
+
       {/* Navigation bar */}
       <Navbar onOpenCustomizer={() => setIsCustomizerOpen(true)} />
 
